@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #171717;
+}
+
+/* HEADER */
+
+header {
+    height: 75px;
+    background: #f5f1ed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 440px;
+    background:
+        linear-gradient(
+            90deg,
+            #f4f0ec 0%,
+            rgba(244,240,236,.95) 35%,
+            rgba(244,240,236,.1) 70%
+        ),
+        url("https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1400")
+        center/cover;
+
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.subtitle {
+    color: #9b806b;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 85px;
+    line-height: 1;
+}
+
+.hero h1 span {
+    color: #a58b75;
+}
+
+.drop {
+    margin: 20px 0;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #a58b75;
+}
+
+.discount {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    background: #eee4dc;
+    border: 2px solid white;
+    outline: 1px solid #c6b6a9;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.discount h2 {
+    font-size: 32px;
+}
+
+
+/* BENEFITS */
+
+.benefits {
+    background: #eeeae6;
+    padding: 20px 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.benefits div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.benefits h2 {
+    font-size: 30px;
+}
+
+.benefits p {
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px 3%;
+}
+
+.product {
+    background: #f3f0ed;
+    text-align: center;
+    padding: 12px;
+}
+
+.product img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+.product h3 {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.product p {
+    color: #9b806b;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* OFFERS */
+
+.offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 3%;
+}
+
+.offer-left {
+    background: #171717;
+    color: white;
+    padding: 25px;
+}
+
+.offer-left h2 {
+    color: #c1a48d;
+    font-size: 28px;
+}
+
+.offer-right {
+    background: #eee7e1;
+    padding: 25px;
+}
+
+.offer-right h2 {
+    font-size: 17px;
+}
+
+.offer-right p {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+
+/* SHOP THE LOOK */
+
+.shop-look {
+    padding: 25px 3%;
+}
+
+.shop-look h2 {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 25px 4%;
+    gap: 15px;
+}
+
+footer h3 {
+    font-size: 11px;
+}
+
+footer p {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        height: 500px;
+        padding: 20px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .discount {
+        width: 80px;
+        height: 80px;
+    }
+
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product img {
+        height: 150px;
+    }
+
+    .offers {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
